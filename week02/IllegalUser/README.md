@@ -1,4 +1,4 @@
-# [프로그래머스] 불법 사용자
+# [프로그래머스] 불량 사용자
 
 - 링크: https://school.programmers.co.kr/learn/courses/30/lessons/64064
 - 난이도: Lv.3
