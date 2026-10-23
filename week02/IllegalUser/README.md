@@ -28,20 +28,7 @@
     - 후보 추가: `if ((mask & (1 << idx)) == 0) next.add(mask | (1 << idx));`
     - `Set<Set<Integer>>`보다 객체 생성과 해시 계산이 훨씬 적어 빠르고 간결하다.
 - 같은 아이디어를 **DFS + 백트래킹**으로 풀어 마지막에 비트마스크를 `Set<Integer>`에 모으는 방법도 있다.
-- Set<Integer> states = new HashSet<>();
-states.add(0); // 빈 집합
-
-for (List<Integer> candidates : list) {
-    Set<Integer> next = new HashSet<>();
-    for (int mask : states) {
-        for (int idx : candidates) {
-            if ((mask & (1 << idx)) == 0) {   // set.contains(idx) 대신
-                next.add(mask | (1 << idx));  // 복사 + add를 한 번에
-            }
-        }
-    }
-    states = next;
-}
+- <img width="722" height="327" alt="스크린샷 2026-10-23 오후 11 37 16" src="https://github.com/user-attachments/assets/3fc150c3-d0ae-42f8-96cb-ca52088136d1" />
 -<img width="722" height="203" alt="스크린샷 2026-10-23 오후 11 36 17" src="https://github.com/user-attachments/assets/d9b8c368-3e20-4668-be3c-c1e389599dbe" />
 
 
